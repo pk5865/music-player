@@ -1,0 +1,117 @@
+.main{
+width:100%;
+background:#121212;
+color:white;
+min-height:100vh;
+}
+
+.title{
+text-align:center;
+margin-top:20px;
+font-size:36px;
+color:#1DB954;
+}
+
+.container{
+display:flex;
+padding:20px;
+}
+
+/* LEFT PLAYER */
+
+.left{
+width:75%;
+padding:40px;
+border-right:1px solid #333;
+text-align:center;
+}
+
+/* RIGHT PLAYLIST */
+
+.right{
+width:25%;
+padding:20px;
+}
+
+/* SONG TITLE */
+
+.songTitle{
+margin-bottom:30px;
+font-size:32px;
+font-weight:bold;
+}
+
+/* AUDIO PLAYER */
+
+audio{
+width:60%;
+margin-bottom:25px;
+}
+
+/* PLAYER BUTTONS */
+
+.buttons button{
+margin:10px;
+padding:15px 22px;
+font-size:22px;
+cursor:pointer;
+border:none;
+border-radius:6px;
+background:#1DB954;
+color:white;
+transition:0.2s;
+}
+
+.buttons button:hover{
+background:#1ed760;
+}
+
+/* PLAYLIST */
+
+ul{
+list-style:none;
+padding:0;
+}
+
+/* SONG ROW */
+
+li{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px;
+margin-bottom:8px;
+background:#1e1e1e;
+border-radius:5px;
+}
+
+/* HOVER EFFECT */
+
+li:hover{
+background:#2a2a2a;
+}
+
+/* DELETE BUTTON */
+
+li button{
+padding:6px 10px;
+cursor:pointer;
+background:#ff4d4d;
+border:none;
+color:white;
+border-radius:4px;
+}
+
+li button:hover{
+background:#ff1a1a;
+}
+
+/* COVER IMAGE */
+
+.cover{
+width:350px;
+height:350px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:30px;
+}
