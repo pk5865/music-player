@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-m#i2))u13lnx3h^ls!v(o7o7cg6iy3amfz%cnmpakudpr)_f*d
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Applications
@@ -103,7 +103,8 @@ STATIC_URL = 'static/'
 
 # Media files (song uploads)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key
