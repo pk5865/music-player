@@ -8,22 +8,27 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-m#i2))u13lnx3h^ls!v(o7o7cg6iy3amfz%cnmpakudpr)_f*d'
 
-DEBUG = True
+
+# Production settings
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
 
-# Applications
+# Application definition
 INSTALLED_APPS = [
     'corsheaders',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
     'songs',
 ]
@@ -32,6 +37,7 @@ INSTALLED_APPS = [
 # Middleware
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -39,9 +45,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 ]
+
+
+# Allow React frontend access
 CORS_ALLOW_ALL_ORIGINS = True
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
 
 
 ROOT_URLCONF = 'musicbackend.urls'
@@ -97,14 +104,14 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files
-STATIC_URL = 'static/'
+# Static files (required for Render deployment)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Media files (song uploads)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key
